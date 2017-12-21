@@ -16,7 +16,10 @@ class ViewController: UIViewController, UITextViewDelegate {
     @IBOutlet var picker: UIPickerView!
     @IBOutlet var toolbar: UIToolbar!
     @IBOutlet weak var toolbarTitle: UIBarButtonItem!
-    var arrVariable:[String] = []
+    var arrVariable:[String] = ["num1", "num2"] // this array should be bind with following variable.
+    var num1: Int = 0
+    var num2:Int = 1
+    var timer = Timer()
     
     private func addOutput(_ string: String, color: UIColor) {
         let text = NSAttributedString(string: string + "\n\n", attributes: [
@@ -30,6 +33,7 @@ class ViewController: UIViewController, UITextViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         inputField.delegate = self
+        timer = Timer.scheduledTimer(timeInterval: 3, target: self, selector: #selector(self.updateCounting), userInfo: nil, repeats: true)
         // Do any additional setup after loading the view, typically from a nib.
         output.append(outputView.attributedText!)
     }
@@ -49,6 +53,42 @@ class ViewController: UIViewController, UITextViewDelegate {
             }
         }
     }
+    
+    @objc func updateCounting() {
+        num1 = Int(arc4random())
+        num2 = Int(arc4random())
+    }
+    
+    @IBAction func cancelAction(_ sender: UIBarButtonItem) {
+        picker.delegate = nil
+        picker.dataSource = nil
+        inputField.inputView = nil
+        inputField.resignFirstResponder()
+    }
+    
+    @IBAction func doneAction(_ sender: UIBarButtonItem) {
+        
+        inputField.text = "\(inputField.text!)\(arrVariable[picker.selectedRow(inComponent: 0)])"
+        inputField.resignFirstResponder()
+        removeDoneButtonOnKeyboard()
+        picker.delegate = nil
+        picker.dataSource = nil
+        inputField.inputView = nil
+    }
+    
+    @IBAction func addVariableAction(_ sender: UIButton) {
+        inputField.resignFirstResponder()
+        picker.delegate = self
+        picker.dataSource = self
+        inputField.inputView = picker
+        self.addDoneButtonOnKeyboard()
+        inputField.becomeFirstResponder()
+        removeDoneButtonOnKeyboard()
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
 }
 
 extension ViewController:UIPickerViewDelegate, UIPickerViewDataSource
@@ -67,16 +107,16 @@ extension ViewController:UIPickerViewDelegate, UIPickerViewDataSource
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        //        expressionBuilderView.addFunction(functionName: arrFunctions[row]["FunctionName"] as! String, minArg: arrFunctions[row]["MinArg"] as! Int, maxArg: arrFunctions[row]["MaxArg"] as! Int)
+        
     }
     func addDoneButtonOnKeyboard()
     {
-        expressionBuilderView.expressionField.inputAccessoryView = toolbar
+        inputField.inputAccessoryView = toolbar
     }
     
     func removeDoneButtonOnKeyboard()
     {
-        expressionBuilderView.expressionField.inputAccessoryView = nil
+        inputField.inputAccessoryView = nil
     }
     
 }

@@ -129,6 +129,53 @@
             endingLineNumber = "203"
             landmarkName = "Options"
             landmarkType = "14">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "globalinit_33_0A25F1D2BA3A94356033A4365F386EA8_func0"
+                  moduleName = "ExpressionDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/varunnaharia/Documents/Demo/ExpressionDemo/ExpressionDemo/Expression/Expression.swift"
+                  timestampString = "535556602.057146"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "203"
+                  endingLineNumber = "203"
+                  offsetFromSymbolStart = "13">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ExpressionDemo.Expression.Options.noOptimize.unsafeMutableAddressor : ExpressionDemo.Expression.Options"
+                  moduleName = "ExpressionDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/varunnaharia/Documents/Demo/ExpressionDemo/ExpressionDemo/Expression/Expression.swift"
+                  timestampString = "535556602.062431"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "203"
+                  endingLineNumber = "203"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static ExpressionDemo.Expression.Options.noOptimize.getter : ExpressionDemo.Expression.Options"
+                  moduleName = "ExpressionDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/varunnaharia/Documents/Demo/ExpressionDemo/ExpressionDemo/Expression/Expression.swift"
+                  timestampString = "535556602.073997"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "203"
+                  endingLineNumber = "203"
+                  offsetFromSymbolStart = "12">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -218,11 +265,29 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ExpressionDemo/ViewController.swift"
-            timestampString = "535547977.849262"
+            timestampString = "535556601.747417"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "75"
-            endingLineNumber = "75">
+            startingLineNumber = "48"
+            endingLineNumber = "48"
+            landmarkName = "textViewDidChange(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ExpressionDemo/ViewController.swift"
+            timestampString = "535556601.747954"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "81"
+            endingLineNumber = "81"
+            landmarkName = "addVariableAction(_:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
